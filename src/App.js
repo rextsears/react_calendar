@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import Calendar from "./calendar";
 import Legend from "./legend";
@@ -30,10 +30,15 @@ export default function App() {
 
   const dates = Array.from({ length: 28 }, (x, i) => i + 1);
 
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
   return (
     <div className="App">
       <h1>React Calendar</h1>
-      <Legend /> 
+      <Legend
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
       <Calendar days={days} dates={dates} />
     </div>
   );

@@ -95,3 +95,10 @@
     background-color: red;
     color: white;
   }
+  
+  .selected {
+    background-color: #d4ff32;
+    color: black;
+    border: dashed black;
+    box-shadow: 3px 3px;
+  }
