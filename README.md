@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# React Calendar - Part 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Intro
 
-## Available Scripts
+![titlepic](./public/titlepic.webp)
 
-In the project directory, you can run:
+You goal for this lab will be to use the skills you have learned in React to recreate the React Calendar seen below:
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You will need to create a React-based CodeSandbox to complete the lab
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Wireframes
 
-### `npm test`
+We’re going to go with a clean, minimalistic user interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Note: Feel free to go with your own layout, colors, etc.
 
-### `npm run build`
+![pt1wireframe](./public/pt1wireframe.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow the instructions below to complete your own React Calendar!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Copy the following code to your App.js to use as a starting point.
+DO NOT CHANGE THE days OR dates ARRAYS!
 
-### `npm run eject`
+  import "./styles.css";
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  export default function App() {
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    const days = [
+      {
+        name: "Sunday"
+      },
+      {
+        name: "Monday"
+      },
+      {
+        name: "Tuesday"
+      },
+      {
+        name: "Wednesday"
+      },
+      {
+        name: "Thursday"
+      },
+      {
+        name: "Friday"
+      },
+      {
+        name: "Saturday"
+      },
+    ]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    // The following creates an array of numbers from [1..28]
+    const dates = Array.from({length: 28}, (x, i) => i + 1)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    return (
+      <div className="App">
+        <h1>React Calendar</h1>
+      </div>
+    );
+  }
 
-## Learn More
+Using the provided dates and days arrays, create a <Calendar /> component that looks like the wireframe above.
+You must pass the arrays down using props, and use that data to display the name & date for each day.
+Your calendar should have 4 even rows (weeks) with 7 cells (days) in each row.
+Inside each cell, you should display the name of the day on top & the date below.
+Note: Don’t forget to keep checking the wireframe to make sure you are on the right track!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Code away and have fun!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This lab is not is a deliverable.
 
-### Code Splitting
+![titlepic](./public/titlepic.webp)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# React Calendar - Part 2
 
-### Analyzing the Bundle Size
+## Intro
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+We will be adding to Part 1 of the React Calendar lab by adding a few color applicators to help you organize the days of your calendar.
 
-### Making a Progressive Web App
+## Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Continue working in the same CodeSandbox that you used for Part 1!
 
-### Advanced Configuration
+## Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+We’re going to be adding the functionality to change the background color of each cell, in order to organize them by category.
 
-### Deployment
+    Note: Again, feel free to go with your own layout, colors, etc.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Step 1
 
-### `npm run build` fails to minify
+- You will need to add 4 (or more) color selectors above the calendar
+- When the pages loads, your page should look like this:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![pt2step1](./public/pt2step1.png)
+
+### Step 2
+
+- When you click on one of the categories at the top of the page (Holiday, Work, Errands, Sick), that category should be styled to show that it is “selected”
+- You can see in the example below, the category “Holiday” has a glow/border to show that it is the selected category
+
+![pt2step2](./public/pt2step2.png)
+
+    Note: How you choose to show a category is selected is up to you, even a simple border will work!
+
+### Step 3
+
+- After selecting a category at the top of the page, you should be able to click on any cell (day) in the calendar and apply the color of the category to the background color of the cell
+- In our example, since we have selected “Holiday”, clicking on any cell in the calendar should change the background color of that cell to gold
+- Selecting a new category should un-select the previously selected category, and highlight the newly selected category
+
+![pt2step3](./public/pt2step3.png)
+
+### Step 4
+
+- Add the same functionality to each category, so that you can add each color to your calendar and organize your schedule by category
+
+![pt2step4](./public/pt2step4.png)
+
+Code away and have fun!
+
+This lab is not is a deliverable.
