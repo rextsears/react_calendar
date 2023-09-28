@@ -14,31 +14,45 @@
   }
   
   .cell:nth-child(7n + 1) {
-    background-color: #f9a825;
+    background-color: rgb(255 89 69);
+    color: white;
+    border: solid black;
   }
   
   .cell:nth-child(7n + 2) {
-    background-color: #66bb6a;
+    background-color: rgb(255 89 69);
+    color: white;
+    border: solid black;
   }
   
   .cell:nth-child(7n + 3) {
-    background-color: #f48fb1;
+    background-color: rgb(255 89 69);
+    color: white;
+    border: solid black;
   }
   
   .cell:nth-child(7n + 4) {
-    background-color: #29b6f6;
+    background-color: rgb(255 89 69);
+    color: white;
+    border: solid black;
   }
   
   .cell:nth-child(7n + 5) {
-    background-color: #ff7043;
+    background-color: rgb(255 89 69);
+    color: white;
+    border: solid black;
   }
   
   .cell:nth-child(7n + 6) {
-    background-color: #f57c00;
+    background-color: rgb(255 89 69);
+    color: white;
+    border: solid black;
   }
   
   .cell:nth-child(7n + 7) {
-    background-color: #ab47bc; 
+    background-color: rgb(255 89 69);
+    color: white;
+    border: solid black;
   }
   
   .App {
@@ -46,3 +60,38 @@
     text-align: center;
   }
   
+  .legend {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .legend-cell {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: solid black;
+  }
+  
+  .yellow {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .blue {
+    background-color: blue;
+    color: white;
+  }
+  
+  .green {
+    background-color: green;
+    color: white;
+  }
+  
+  .red {
+    background-color: red;
+    color: white;
+  }

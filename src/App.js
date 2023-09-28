@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import Calendar from "./calendar";
+import Legend from "./legend";
 
 export default function App() {
   const days = [
@@ -32,6 +33,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>React Calendar</h1>
+      <Legend /> 
       <Calendar days={days} dates={dates} />
     </div>
   );
