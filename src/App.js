@@ -6,31 +6,32 @@ import Legend from "./legend";
 export default function App() {
   const days = [
     {
-      name: "Sunday",
+      name: "Sunday"
     },
     {
-      name: "Monday",
+      name: "Monday"
     },
     {
-      name: "Tuesday",
+      name: "Tuesday"
     },
     {
-      name: "Wednesday",
+      name: "Wednesday"
     },
     {
-      name: "Thursday",
+      name: "Thursday"
     },
     {
-      name: "Friday",
+      name: "Friday"
     },
     {
-      name: "Saturday",
-    },
+      name: "Saturday"
+    }
   ];
 
   const dates = Array.from({ length: 28 }, (x, i) => i + 1);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedDate, setSelectedDate] = useState([]);
 
   return (
     <div className="App">
@@ -39,7 +40,13 @@ export default function App() {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-      <Calendar days={days} dates={dates} />
+      <Calendar
+        days={days}
+        dates={dates}
+        selectedCategory={selectedCategory}
+        setSelectedDate={setSelectedDate}
+        selectedDate={selectedDate}
+      />
     </div>
   );
 }

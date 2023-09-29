@@ -77,7 +77,7 @@
   }
   
   .yellow {
-    background-color: yellow;
+    background-color: #bf9000;
     color: black;
   }
   
@@ -97,8 +97,7 @@
   }
   
   .selected {
-    background-color: #d4ff32;
-    color: black;
-    border: dashed black;
-    box-shadow: 3px 3px;
+    border: 2px dashed #4deeea;
+    box-shadow: 4px 4px 0px 0px black;
   }
+  
